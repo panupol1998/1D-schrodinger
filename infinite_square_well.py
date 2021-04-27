@@ -58,8 +58,12 @@ norm_wave = -wave/np.sqrt(ans)
 prob = norm_wave**2.0
 
 ### visualization
-plt.title("The infinite square well in 1 dimension at state {}".format(state))
 plt.subplot(1,2,1)
-plt.plot(x_points,norm_wave,label='$\psi$')
+plt.plot(x_points,norm_wave)
+plt.ylabel(f"$\psi_{state}(x)$")
+plt.xlabel("x")
 plt.subplot(1,2,2)
-plt.plot(x_points,prob,label='Probability')
+plt.plot(x_points,prob)
+plt.ylabel(f"Probability(x)")
+plt.xlabel("x")
+plt.show()
